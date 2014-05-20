@@ -2,8 +2,6 @@ require './lib/loader'
 require 'sinatra'
 
 get '/' do
-  # @games = steam_client.get_games('todvonoben')
-  # puts @games
   erb :index
 end
 

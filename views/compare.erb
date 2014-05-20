@@ -1,6 +1,38 @@
-<h1>Compare Games!</h1>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css" >
+  </head>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Steam Game Compare</a>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="container">
+  <h1>Compare Games!</h1>
 
-<h3>First Person</h3>
-<%= @person1_games %>
-<h3>Second person</h3>
-<%= @person2_games %>
+  <h3>First Person</h3>
+  <% @person1_games.each do |game| %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><%= game['title'] %></div>
+      <div class="panel-body">
+        <img src="<%= game['image_url'] %>" />
+      </div>
+    </div>
+  <% end %>
+
+  <h3>Second person</h3>
+  <% @person2_games.each do |game| %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><%= game['title'] %></div>
+      <div class="panel-body">
+        <img src="<%= game['image_url'] %>" />
+      </div>
+    </div>
+  <% end %>
+</html>
+
+
+

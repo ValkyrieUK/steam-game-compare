@@ -1,5 +1,41 @@
-<form action="/compare" method="post">
-  First Steam_id: <input type="text" name="steam_id1"><br>
-  Seccond Steam_id: <input type="text" name="steam_id2"><br>
-  <input type="submit" value="Submit">
-</form>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css" >
+  </head>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Steam Game Compare</a>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="container">
+    <h1>Comapre Games</h1>
+
+
+  <form class="form-horizontal" action="/compare" method="post">
+  <fieldset>
+    <legend>Enter the ID's to compare</legend>
+    <div class="form-group">
+      <label for="steam_id" class="col-lg-2 control-label">First Steam_id: </label>
+      <div class="col-lg-10">
+        <input name="steam_id1" type="text" class="form-control" id="inputEmail" placeholder="TodvonOben">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="steam_id" class="col-lg-2 control-label">Seccond Steam_id: </label>
+      <div class="col-lg-10">
+        <input name="steam_id2" type="text" class="form-control" id="inputEmail" placeholder="76561198080665727">
+      </div>
+    </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+        <button class="btn btn-default">Cancel</button>
+        <input type="submit" value="Submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+  </form>
+</html>
+

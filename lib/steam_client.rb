@@ -18,6 +18,6 @@ class SteamClient
   end
 
   def map_games(steam_id)
-    SteamId.new(steam_id).games.map {|i| i[1].name}
+    SteamId.new(steam_id).games.map {|i| Hash["title", i[1].name, "image_url", i[1].logo_url]}
   end
 end
