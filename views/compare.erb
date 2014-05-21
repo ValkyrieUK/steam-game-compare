@@ -12,9 +12,9 @@
   <br><br><br>
   <div class="container">
   <h1>Compare Games!</h1>
+  <h3>Games you have in common</h3>
 
-  <h3>First Person</h3>
-  <% @person1_games.each do |game| %>
+  <% @games_in_common.each do |game| %>
     <div class="panel panel-default">
       <div class="panel-heading"><%= game['title'] %></div>
       <div class="panel-body">
@@ -23,15 +23,6 @@
     </div>
   <% end %>
 
-  <h3>Second person</h3>
-  <% @person2_games.each do |game| %>
-    <div class="panel panel-default">
-      <div class="panel-heading"><%= game['title'] %></div>
-      <div class="panel-body">
-        <img src="<%= game['image_url'] %>" />
-      </div>
-    </div>
-  <% end %>
 </html>
 
 
