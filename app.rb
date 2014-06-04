@@ -6,6 +6,7 @@ get '/' do
 end
 
 post '/compare' do
+  puts params
   puts params[:steam_id1]
   puts params[:steam_id2]
   @person1_games = steam_client.get_games(params[:steam_id1])
